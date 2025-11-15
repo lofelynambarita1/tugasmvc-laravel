@@ -1,0 +1,60 @@
+/* Custom simple theme on top of Bootstrap */
+:root {
+  --brand: #0d6efd; /* Bootstrap primary */
+  --muted: #6c757d;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f6 100%);
+  color: #212529;
+  padding-top: 70px; /* space for navbar */
+}
+.site-navbar {
+  backdrop-filter: blur(6px);
+}
+.card-elevated {
+  border: 0;
+  box-shadow: 0 6px 18px rgba(22, 28, 45, 0.08);
+}
+.brand-logo {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.lead-muted {
+  color: var(--muted);
+}
+.btn-primary {
+  background: linear-gradient(180deg, var(--brand) 0%, #0b5ed7 100%);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+.small-muted {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+/* center small auth cards on taller screens */
+.auth-center {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 576px) {
+  .brand-logo {
+    font-size: 1rem;
+  }
+}
+
+/* subtle 404 style */
+.page-404 h1 {
+  font-size: 5.5rem;
+  font-weight: 700;
+}
+
+/* small helpers */
+.form-card {
+  max-width: 420px;
+  width: 100%;
+}
